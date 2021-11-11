@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("./img/covid-bc-19.jpg") center no-repeat fixed;
+    background-size: cover;
+    scroll-behavior: smooth;
+    user-select: none;
+    color: #fff;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0); 
+    opacity: 0;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 20px;
+}
+
+.app-upper-section {
+    max-width: 97%;
+    margin: 1.5% auto;
+}
+
+.container {
+    max-width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(auto, 10);
+    grid-template-columns: 7fr 5fr;
+    grid-gap: 20px;
+}
+
+.header-section,
+.stats-container,
+.graph-section{
+    grid-column: 1/2;
+}
+
+.header-section {
+    grid-row: 1/2;
+}
+
+.table-section {
+    grid-row: 1/5;
+    grid-column: 2/3;
+}
+
+.stats-section {
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.stats-container {
+    width: 200px;
+    height: 150px;
+}
+
+.graph-section {
+    grid-row: 3/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.map-container {
+    max-width: 100%;
+    height: 80vh;
+    grid-row: 5/8;
+    grid-column: 1/-1;
+}
+
+.app-lower-section {
+    width: 97%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        grid-template-rows: auto auto auto auto;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .header-section,
+    .stats-section,
+    .graph-section,
+    .table-section {
+        grid-column: 1/-1;
+        max-width: 100%;
+    }
+
+    .header-section {
+        height: 100px;
+    }
+
+    .stats-container {
+        width: 250px;
+    }
+    
+    .graph-section {
+        height: 300px;
+    }
+
+    .table-section {
+        grid-row: 5/8;
+        height: 90vh;
+    }
+
+    .map-container {
+        grid-row: 8/10;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 992px) {
+    .stats-section {
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .stats-container {
+        width: 400px;
+        max-width: 45%;
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .app-upper-section {
+        width: 100vw;
+        margin: 0;
+    }
+
+    .container {
+        grid-template-columns: auto;
+    }
+
+    .header-section,
+    .stats-section,
+    .graph-section,
+    .table-section {
+        width: 100%;
+    }
+
+    .header-section {
+        height: 150px;
+    }
+
+    .stats-section {
+        flex-direction: column;
+    }
+
+    .stats-container {
+        max-width: 100%;
+        width: 560px;
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .graph-section {
+        height: 350px;
+    }
+
+    .table-section {
+        height: 100vh;
+    }
+
+    .map-container {
+        max-width: 100vh;
+        width: 560px;
+        height: 100vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.type-select {
+    width: 300px;
+}
+
+.MuiPopover-paper {
+    background: rgb(255, 255, 255);
+}
+
+.MuiPopover-root {
+    backdrop-filter: blur( 2.5px );
+}
+
+#demo-simple-select {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur( 2.5px );
+    padding-left: 10px;
+}
+#demo-simple-select:hover {
+    border-bottom: #fff;
+}
+
+.MuiInput-underline:before {
+    border-bottom: 0px solid #fc4;
+}
+.MuiInput-underline:hover:not(.Mui-disabled):before {
+    border-bottom: 0px solid rgba(0, 0, 0, 0);
+}
+
+.MuiMenu-paper::-webkit-scrollbar {
+    display: none;
+}
+
+
+.svg-map {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    height: 60vh;
+}
