@@ -25,7 +25,7 @@ const Footer = () => {
 
                 <div className="footer-optional"></div>
             </footer>
-            <p className="copyright"> Created by: Team PEVER 2021 </p>
+            <p className="copyright"> Created by: <a href='https://anoopraju.xyz'>Anoop Raju</a> 2021 </p>
         </div>
     )
 }
